@@ -851,6 +851,7 @@ OGRFeature *S57Reader::AssembleFeature( DDFRecord * poRecord,
                          poRecord->GetIntSubfield( "FOID", 0, "FIDN", 0 ));
     poFeature->SetField( "FIDS",
                          poRecord->GetIntSubfield( "FOID", 0, "FIDS", 0 ));
+    poFeature->SetField( "DSNM", pszDSNM);
 
 /* -------------------------------------------------------------------- */
 /*      Generate long name, if requested.                               */

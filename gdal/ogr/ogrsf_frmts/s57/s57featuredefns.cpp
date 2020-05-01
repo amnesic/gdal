@@ -502,6 +502,12 @@ void S57GenerateStandardAttributes( OGRFeatureDefn *poFDefn, int nOptionFlags )
     poFDefn->AddFieldDefn( &oField );
 
 /* -------------------------------------------------------------------- */
+/*      DSNM                                                            */
+/* -------------------------------------------------------------------- */
+    oField.Set( "DSNM", OFTString, 0, 0 );
+    poFDefn->AddFieldDefn( &oField );
+
+/* -------------------------------------------------------------------- */
 /*      LNAM - only generated when LNAM strings are being used.         */
 /* -------------------------------------------------------------------- */
     if( nOptionFlags & S57M_LNAM_REFS )
